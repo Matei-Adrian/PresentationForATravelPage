@@ -1,0 +1,367 @@
+body {
+    margin: 0;
+    height: 100vh;
+    color: #555;
+}
+
+section:nth-of-type(even) {
+    background-color: #f5f5f5;
+}
+
+.background-image {
+    background-image: url("../img/main.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+a {
+    opacity: 0.75;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Open Sans", sans-serif;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    opacity: 0;
+    animation: nav-appear 1s 0.5s linear forwards;
+}
+
+@keyframes nav-appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tag {
+    font-size: 25px;
+    color: #fff;
+}
+
+.nav-links {
+    font-size: 16px;
+}
+
+.nav-link {
+    padding-left: 40px;
+    color: white;
+}
+
+.main {
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    opacity: 0;
+    animation: main-appear 1s 1s ease-out forwards;
+}
+
+@keyframes main-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main h1 {
+    font-size: 60px;
+    margin: 0;
+}
+.main p {
+    font-size: 28px;
+    margin:0;
+    margin-bottom: 20px;
+}
+.main button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 600;
+    color: white;
+    background: #023e8a;
+    border-radius: 7px;
+    padding: 20px 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .main h1 {
+        font-size: 48px;
+    }
+    .main p {
+        font-size: 22px;
+    }
+    .main button {
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 690px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:25px 0 0 0 ;  
+    }
+    .nav-link {
+        padding: 0 10px;
+    }
+    .tag {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 530px) {
+    .main h1 {
+        font-size: 38px;
+    }
+    .main p {
+        font-size: 18px;
+        text-align: center;
+    }
+    .main button {
+        padding: 12px 37px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+.destinations, .packages, 
+.testimonials, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destinations .grid {
+    width: 90%;
+    height: 750px;
+}
+
+.grid .small {
+    width: 30%;
+    height: 50%;
+}
+
+.grid .large {
+    width: 70%;
+    height: 50%;
+}
+
+li img {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 28px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.destinations p, .packages p,
+.testimonials p, .contact p {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    font: normal 17px "Open Sans", sans-serif;
+}
+
+@media (max-width: 1100px) {
+    .grid .small, .grid .large {
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .destinations p, .packages p,
+    .testimonials p, .contact p {
+        width: 90%;
+    }
+
+    .grid .small, .grid .large {
+        width: 100%;
+    }
+    .destinations .grid {
+        height: auto;
+    }
+}
+
+.testimonials p {
+    line-height: 1.5;
+}
+
+.destinations p, .packages p, .contact p {
+    line-height: 2; 
+}
+
+.packages .grid li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 50px;
+}
+
+@media (max-width: 800px) {
+    .packages .grid li {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.packages .grid li h4 {
+    font: bold 30px "Open Sans", sans-serif;
+    margin: 25px 0;
+}
+
+.packages .grid li i {
+    color: #8c9eff;
+}
+
+.grid li p {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.testimonials .quote {
+    font-size: 23px;
+    font-weight: 300;
+    margin: 40px 0 25px;
+}
+
+@media (max-width: 800px) {
+    .testimonials .quote {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+}
+
+.contact form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-bottom: 100px;
+}
+
+.contact form button {
+    padding: 18px 42px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    border: none;
+    font-weight: 600;
+    color: white;
+    background: #023e8a;
+    cursor: pointer;
+}
+
+.contact form input {
+    padding: 15px;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #555;
+    flex-grow: 1;
+}
+
+@media (max-width:1000px) {
+    .contact form input {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #607d8b;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 16px;
+}
+
+footer p {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-size: 16px;
+    align-self: center;
+}
+
+@media (max-width:1100px) {
+    footer {
+        flex-direction: column;
+    }
+    footer p {
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    footer ul {
+        justify-content: center;
+        padding: 0;
+    }
+}
